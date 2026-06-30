@@ -3,59 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital & IA</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <title>Cidadania Digital e IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-        }
+    <header>
+        <div class="header-container">
+            <h1>Cidadania Digital & Inteligência Artificial</h1>
+            <p>Guia prático para navegar na internet com ética, segurança e responsabilidade.</p>
+        </div>
+    </header>
 
-        header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-        }
+    <main class="main-container">
+        <section class="cards-grid">
+            <div class="info-card">
+                <h2>O que é Cidadania Digital?</h2>
+                <p>É o conjunto de regras e comportamentos que adotamos para usar a tecnologia de forma ética, segura e respeitosa. Ser um bom cidadão digital significa proteger seus dados e respeitar o próximo no ambiente virtual.</p>
+            </div>
+            
+            <div class="info-card">
+                <h2>O Papel da IA no nosso dia a dia</h2>
+                <p>A Inteligência Artificial personaliza o que vemos nas redes sociais. Embora seja útil, ela também pode criar bolhas de informação e facilitar a criação de conteúdos falsos muito realistas, como os <i>deepfakes</i>.</p>
+            </div>
+        </section>
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
+        <section class="tips-box">
+            <h2>Pilares da Cidadania Digital na Era da IA</h2>
+            <ul class="tips-list">
+                <li><strong>Pense antes de compartilhar:</strong> Nem tudo que parece real na internet é verdade. Desconfie de notícias bombásticas geradas por IA.</li>
+                <li><strong>Proteja sua privacidade:</strong> Não forneça dados pessoais ou fotos íntimas para ferramentas de IA desconhecidas.</li>
+                <li><strong>Pratique a empatia virtual:</strong> Lembre-se de que do outro lado da tela existem pessoas reais. Evite discursos de ódio.</li>
+            </ul>
+        </section>
 
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+        <section class="quiz-box">
+            <h2>Desafio Interativo</h2>
+            <p class="quiz-question">Você se deparou com uma imagem muito estranha e polêmica de uma figura pública na internet. O que você faz antes de reagir ou repassar?</p>
+            
+            <div class="quiz-buttons">
+                <button class="btn-quiz" onclick="checarResposta('errado')">Compartilho logo para alertar meus amigos.</button>
+                <button class="btn-quiz" onclick="checarResposta('correto')">Verifico em sites de notícias se a imagem é real ou se foi gerada por IA.</button>
+                <button class="btn-quiz" onclick="checarResposta('errado2')">Deixo um comentário atacando a pessoa da foto.</button>
+            </div>
+            
+            <div id="mensagem-resultado" class="resultado-oculto"></div>
+        </section>
+    </main>
 
-        .card-section {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
+    <footer>
+        <p>&copy; 2026 - Conscientização sobre Cidadania Digital. Feito para o GitHub Pages.</p>
+    </footer>
 
-        .card {
-            flex: 1;
-            min-width: 280px;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .card h2 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .tips
+    <script src="script.js"></script>
+</body>
+</html>
