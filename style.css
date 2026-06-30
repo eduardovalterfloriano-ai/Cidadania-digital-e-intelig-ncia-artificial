@@ -1,130 +1,159 @@
-/* Configurações Gerais */
+/* Reset básico de elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #f0f4f8;
+    color: #2c3e50;
     line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
-    color: white;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    padding: 3rem 1rem;
     text-align: center;
-    padding: 2rem 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Container Principal */
-.container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-/* Cards de Conceito */
-.card-section {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.card {
-    flex: 1;
-    min-width: 280px;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-/* Seção de Dicas */
-.tips-section {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.tips-section h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.tips-section ul {
-    list-style-position: inside;
-    padding-left: 1rem;
-}
-
-.tips-section li {
+.header-container h1 {
+    font-size: 2.3rem;
     margin-bottom: 0.8rem;
 }
 
-/* Seção do Quiz */
-.quiz-section {
-    background: #e8f4fd;
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    border: 2px solid #3498db;
+.header-container p {
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-.quiz-section h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
+/* Layout Principal */
+.main-container {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
 }
 
-.quiz-options {
+/* Grade de Cartões */
+.cards-grid {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1.5rem;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
     flex-wrap: wrap;
 }
 
-.quiz-options button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+.info-card {
+    flex: 1;
+    min-width: 280px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid #2a5298;
 }
 
-.quiz-options button:hover {
-    background-color: #2980b9;
+.info-card h2 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
 }
 
-.resultado {
-    margin-top: 1.5rem;
+/* Bloco de Dicas */
+.tips-box {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tips-box h2 {
+    color: #1e3c72;
+    margin-bottom: 1.2rem;
+}
+
+.tips-list {
+    list-style-type: none;
+}
+
+.tips-list li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.tips-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #2a5298;
     font-weight: bold;
-    font-size: 1.2rem;
+}
+
+/* Bloco do Quiz */
+.quiz-box {
+    background: #eef2f7;
+    border: 2px dashed #2a5298;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.quiz-box h2 {
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+.quiz-question {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.quiz-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.btn-quiz {
+    background-color: #ffffff;
+    color: #2a5298;
+    border: 2px solid #2a5298;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-quiz:hover {
+    background-color: #2a5298;
+    color: #ffffff;
+}
+
+/* Área de Resultado do Quiz */
+.resultado-oculto {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    display: none; /* Escondido até o usuário clicar */
 }
 
 /* Rodapé */
 footer {
+    background-color: #1e3c72;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem;
-    background-color: #2c3e50;
-    color: white;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
 }
