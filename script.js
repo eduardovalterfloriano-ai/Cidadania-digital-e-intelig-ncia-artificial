@@ -1,11 +1,25 @@
-function verificarResposta(isCorrect) {
-    const resultadoTexto = document.getElementById("resultado-quiz");
+function checarResposta(tipoResposta) {
+    // Busca o elemento de texto onde vamos mostrar o resultado
+    const caixaResultado = document.getElementById("mensagem-resultado");
+    
+    // Torna a caixinha de texto visível na tela
+    caixaResultado.style.display = "block";
 
-    if (isCorrect) {
-        resultadoTexto.innerText = "Parabéns! 🎉 Essa é a atitude correta. Com a ascensão das ferramentas de IA, conteúdos falsos (como deepfakes) são gerados facilmente. Sempre cheque os fatos!";
-        resultadoTexto.style.color = "#27ae60"; // Verde para acerto
+    // Verifica qual botão o usuário clicou e muda o texto/cor
+    if (tipoResposta === 'correto') {
+        caixaResultado.innerText = "Excelente escolha! 🌟 Com as tecnologias de IA gerativa, imagens falsas parecem reais. Checar canais oficiais e sites de checagem de fatos é a melhor atitude de um cidadão digital.";
+        caixaResultado.style.backgroundColor = "#d4edda";
+        caixaResultado.style.color = "#155724";
+        caixaResultado.style.border = "1px solid #c3e6cb";
+    } else if (tipoResposta === 'errado') {
+        caixaResultado.innerText = "Cuidado! ❌ Compartilhar sem checar espalha boatos e desinformação, o que pode prejudicar pessoas e causar pânico desnecessário.";
+        caixaResultado.style.backgroundColor = "#f8d7da";
+        caixaResultado.style.color = "#721c24";
+        caixaResultado.style.border = "1px solid #f5c6cb";
     } else {
-        resultadoTexto.innerText = "Ops, tente novamente! ❌ Compartilhar sem checar ajuda a espalhar desinformação, o que prejudica a cidadania digital.";
-        resultadoTexto.style.color = "#c0392b"; // Vermelho para erro
+        caixaResultado.innerText = "Atenção! ⚠️ Atacar ou xingar alguém online quebra a regra de ouro da cidadania digital (a empatia), mesmo que a imagem fosse real.";
+        caixaResultado.style.backgroundColor = "#fff3cd";
+        caixaResultado.style.color = "#856404";
+        caixaResultado.style.border = "1px solid #ffeeba";
     }
 }
